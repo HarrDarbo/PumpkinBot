@@ -1,0 +1,11 @@
+{
+  "name": "PumpkinBot",
+  "version": "0.0.0",
+  "description": "Its not very good probably",
+  "main": "bot.js",
+  "author": "Stee",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "winston": "^3.1.0"
+  }
+}

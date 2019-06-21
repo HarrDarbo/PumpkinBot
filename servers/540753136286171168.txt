@@ -1,0 +1,26 @@
+﻿non-binary btw~bruce piper daddy~piper no piping~If a is an integer larger than 1, then
+a can be written as a product of primes. Furthermore, this factorization is unique
+except for the order of the factors.
+proof: There are two things to be proved. Both parts of the proof will use the
+Well-ordering Principle for the set of natural numbers.
+(1) We first prove that every a > 1 can be written as a product of prime
+factors. (This includes the possibility of there being only one factor in case a is
+prime.) Suppose bwoc that there exists a integer a > 1 such that a cannot be
+written as a product of primes. By the Well-ordering Principle, there is a smallest
+such a. Then by assumption a is not prime so a = bc where 1 < b, c < a. So b
+and c can be written as products of prime factors (since a is the smallest positive
+integer than cannot be.) But since a = bc, this makes a a product of prime
+factors, a contradiction.
+(2) Now suppose bwoc that there exists an integer a > 1 that has two
+different prime factorizations, say a = p1 ··· ps = q1 ··· qt , where the pi and
+qj are all primes. (We allow repetitions among the pi and qj . That way, we
+don’t have to use exponents.) Then p1| a = q1 ··· qt . Since p1 is prime, by the
+Lemma above, p1| qj for some j . Since qj is prime and p1 > 1, this means that
+p1 = qj . For convenience, we may renumber the qj so that p1 = q1 . We can
+now cancel p1 from both sides of the equation above to get p2 ··· ps = q2 ··· qt .
+But p2 ··· ps < a and by assumption a is the smallest positive integer with a
+non–unique prime factorization. It follows that s = t and that p2,...,ps are
+the same as q2,...,qt , except possibly in a different order. But since p1 = q1 as
+well, this is a contradition to the assumption that these were two different
+factorizations. Thus there cannot exist such an integer a with two different
+factorizations~piper no piping~dont forget to take pictures of the board!~quiet weeb~22 days until i celebrate my 20th year of eternal virginity~math majors gay~no whyyy~ternary cs major btw~why are you all still awake~I'm fully prepared to take the L on this one~dan the man~4e~what's jagbox's name~jeff~typical Euclid~dolla city sliders gave me that hawt food poisoning with chicken tendies~"Whats the big thing  that looks like a pi?" -Harrison~https://media.discordapp.net/attachments/540753136286171168/543564839096680480/introto.png~9mod11~https://media.discordapp.net/attachments/540753136286171168/544965375587254302/IMG_20190212_143729.jpg?width=211&height=376~selmer daddy~selmer daddy~selmer daddy~is stacy australian?~OOPS~fuck problem 2~I know my level of weeaboo degeneracy is unhealthy but I cant help it~tom's waifu is not real. calm down son its just a drawing.~tom is not hot~tom's waifu wall~tom's waifu wall is scary~
