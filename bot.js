@@ -155,21 +155,21 @@ bot.on('message', function (user, userID, channelID, message, event) { //message
         }
     }
 
-    if(userID.toLowerCase().indexOf("198249753216024576") >= 0) { //parz
+    if(userID.toLowerCase().indexOf("/*REDACTED FOR GITHUB*/") >= 0) { //parz
        if(Math.floor(Math.random() * (+100 - +0)) + +0 > 99 ) //1% chance
        bot.sendMessage({
             to: channelID,
             message: "ok parz"
         });
     }
-    if(userID.toLowerCase().indexOf("173904167692271617") >= 0) { //ganon
+    if(userID.toLowerCase().indexOf("/*REDACTED FOR GITHUB*/") >= 0) { //ganon
        if(Math.floor(Math.random() * (+100 - +0)) + +0 > 99 )
        bot.sendMessage({
             to: channelID,
             message: "pog"
         });
     }
-    if(userID.toLowerCase().indexOf("155141086917033984") >= 0) { //crue
+    if(userID.toLowerCase().indexOf("/*REDACTED FOR GITHUB*/") >= 0) { //crue
        if(Math.floor(Math.random() * (+100 - +0)) + +0 > 99 )
        bot.sendMessage({
             to: channelID,
