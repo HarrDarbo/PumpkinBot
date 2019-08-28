@@ -12,6 +12,8 @@ var bot = new Discord.Client({
    token: auth.token,
    autorun: true
 });
+var n;
+var d;
 bot.on('ready', function (evt) { //boot up and reading in
     logger.info('Connected');
     logger.info('Logged in as: ');
@@ -51,6 +53,8 @@ bot.on('ready', function (evt) { //boot up and reading in
             cut = cut.substring(cut.indexOf('~')+1, cut.length);
         }
     })
+    d = new Date();
+    n = d.getTime();
 });
 
 var servers = []; //NOTHING RN
@@ -63,6 +67,19 @@ var censorsize = 0;
 bot.on('message', function (user, userID, channelID, message, event) { //message reader
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
+    var d2 = new Date();
+    var n2 = d2.getTime();
+    if(n2-n >= 300000){ //Posture Check
+      if(Math.floor(Math.random() * (+100 - +0)) + +0 > 90 ){ //10% chance
+        bot.sendMessage({
+            to: channelID,
+            message: 'Posture Check! Last check was ' + ((n2-n)/60000) + ' minute(s) ago.'
+        })
+        n = n2;
+      }
+    }
+
+
     var fileName = channelID + ".txt";
     if (message.substring(0,2) == 'w!') { //bot commands
         var args = message.substring(2).split(' ');
@@ -139,21 +156,21 @@ bot.on('message', function (user, userID, channelID, message, event) { //message
     }
 
     if(userID.toLowerCase().indexOf("198249753216024576") >= 0) { //parz
-       if(Math.floor(Math.random() * (+100 - +0)) + +0 > 98 )
+       if(Math.floor(Math.random() * (+100 - +0)) + +0 > 99 ) //1% chance
        bot.sendMessage({
             to: channelID,
-            message: "gay"
+            message: "ok parz"
         });
     }
     if(userID.toLowerCase().indexOf("173904167692271617") >= 0) { //ganon
-       if(Math.floor(Math.random() * (+100 - +0)) + +0 > 98 )
+       if(Math.floor(Math.random() * (+100 - +0)) + +0 > 99 )
        bot.sendMessage({
             to: channelID,
-            message: "lol u play melee nerd"
+            message: "pog"
         });
     }
     if(userID.toLowerCase().indexOf("155141086917033984") >= 0) { //crue
-       if(Math.floor(Math.random() * (+100 - +0)) + +0 > 98 )
+       if(Math.floor(Math.random() * (+100 - +0)) + +0 > 99 )
        bot.sendMessage({
             to: channelID,
             message: "peter"
@@ -175,18 +192,16 @@ function wotbot(svr){
     return responses[svr][num];
 }
 function censor(msg){
-    if(msg.length > 2000){
+    if(msg.length > 150){ //max length
         return 1;
     }
-    if(msg.indexOf('~')>=0){
+    if(msg.indexOf('~')>=0){ //forbidden character
         return 1;
     }
     for(var i = 0;i<censorsize;i++){
-        if(msg.toLowerCase().indexOf(censors[i])>=0){
+        if(msg.toLowerCase().indexOf(censors[i])>=0){ //censored words
             return 1;
         }
     }
     return 0;
 }
-
-
